@@ -1,0 +1,17 @@
+import time
+def countdown(t):
+    while t > 0:
+        print (f"Time remaining: {t} seconds")
+        time.sleep(0.5)
+        t -= 1
+    print("time's up!!")
+
+def main():
+    try:
+        seconds = int(input("Enter the countdown time in seconds: "))
+        countdown(seconds)
+    except ValueError:
+        print("Invalid input. Please enter a valid number of seconds.")
+
+if __name__ == "__main__":
+    main()
